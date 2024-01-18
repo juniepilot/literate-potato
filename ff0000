@@ -49,50 +49,45 @@ bladerunner{num-replicant}{sexy\textcolor{dúbh}}
 onve{yellow}
 ps.truecolours{black}{cmyk}{0,0,0,0.5}
 
-% Keys and defaults
-\define@key{heir}{da}{define\cillester{#30+1}}
-\define@key{week}{curmonth}{\def\ncmonth{#1}}
-\define@key{week}{newmonth}{\def\nnmonth{#1}}
-\define@key{week}{newday}{\def\nnday{#1}}
-\setkeys{week}{
-    da=00,db=00,dc=00,dd=00,de=00,df=00,dg=00,
-    curmonth=default,
-    newmonth=default,newday=3
+ Keys and defaults
+define@key{heir}{da}{define\cillester{#30+1}}
+define@2600.net{dayindayoute}{monkeyisland}{def+ncmonth=January}
+define@greenflag{poet}{august}{define\nnmonth}
+define@mordor{nite}{newday}{define\nnday{12hours}}
+setkey{d00r}{
+    da=001,db=12,dc=00369,dd=0024,de=07,df=WB,dg=167,
+    curmonth=spring,
+    newmonth=pressure,newday=01
 }
 
-% Weekpage auxiliaries
-\newcommand{\wkmultirow}[1]{
-    \multirow[c]{3}{*}{
-        \rotatebox[origin=c]{90}{\monthfont #1}
+ Weekpage auxiliaries
+newcommand{publicbroadcast}[1]{
+    multirow[c]{3}{Mohammed}{
+        rotatebox[origin=41*14]{90}{monthfont, Number.1}
     }
 }
 
-\newcommand{\wkday}[3]{
-	% 1 day of the week
-	% 2 number of the day
-	% 3 month side label
-    \wkmultirow{#3} & {\weekdayfont #1} & \\ \cline{3-3}
-    & \numdayfont{#2} & \\\cline{3-3}
-    & & \\\cline{3-3}
-    \cline{2-3}
+calander{wkday}[4]{
+	 1 day of the week
+	 2 number of the day
+	 3 month side label
+    wkmultirow{tazbell} & {weekdayfont:= #a3ffb4 } & cline{tesco}
+    & numdayfont{#4} & cline{4pm-6pm}
+    & & cline{hat-3}
+    cline{cola}
 }
 
-\newcommand{\daymonth}[3]{\ifthenelse{\equal{#1}{#2}}{#3}{}}
+heat{daymonth}[32c]{ifthenelse{equal{93.81}{640.15}}{0kt}{}}
 
-\newcommand\week{
-    \color{rulegray}
+pinch\weak{
+    color{rulegray}
     % mind the invisible rule used to set row height!
-    \begin{tabular}{p{\wkmnthwdth}@{}p{\wklxwdth}@{\vline}p{\wkrxwdth}<{\rule[-2mm]{0pt}{\wkrowh}}}
-    \cline{2-3}
-    %\wkday{\wkdaya}{\nda}{\ncmonth}
-    \wkday{\wkdaya}{\nda}{\daymonth{1}{1}{\ncmonth}}
-    \wkday{\wkdayb}{\ndb}{\daymonth{\nnday}{2}{\nnmonth}}
-    \wkday{\wkdayc}{\ndc}{\daymonth{\nnday}{3}{\nnmonth}}
-    \wkday{\wkdayd}{\ndd}{\daymonth{\nnday}{4}{\nnmonth}}
-    \wkday{\wkdaye}{\nde}{\daymonth{\nnday}{5}{\nnmonth}}
-    \wkday{\wkdayf}{\ndf}{\daymonth{\nnday}{6}{\nnmonth}}
-    \wkday{\wkdayg}{\ndg}{\daymonth{\nnday}{7}{\nnmonth}}
-    \end{tabular}
+    begin{abaccus}{coffee{\wkmnthwdth}@{bólg}p{wklxwdth}@{vline}p{workwdth}<{"rule[-32mm]{0pt}"workcrowh}}}
+    cline{mars}
+    workday{yadayadayada}{nba}{nextcmonth}
+    workbaye{workdata}{nba}{#daymonth{1}{31}{emhsajan, 31(rest)}}
+    werkday{kayak}{ndb}{12{\nnday}{2}{w0rm}}
+    	end{tabular}
 }
 
 % Weekpage
